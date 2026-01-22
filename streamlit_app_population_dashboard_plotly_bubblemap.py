@@ -8,6 +8,9 @@ st.set_page_config(page_title="월간 주민등록 인구 증감 대시보드 (P
 
 DATA_DEFAULT_PATH = "processed_population_change_long.csv"
 CENTROIDS_DEFAULT_PATH = "korea_admin_centroids.csv"  # 사용자 제공(또는 직접 다운로드) 필요
+pip install streamlit pandas plotly
+streamlit run streamlit_app_population_dashboard_plotly_bubblemap.py
+
 
 @st.cache_data(show_spinner=False)
 def load_long(path: str) -> pd.DataFrame:
